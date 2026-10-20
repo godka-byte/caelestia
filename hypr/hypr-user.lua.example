@@ -1,0 +1,2 @@
+hl.unbind("SUPER + SUPER_L")
+hl.bind("SUPER + SUPER_L", hl.dsp.exec_cmd("qs -c caelestia ipc call drawers toggle launcher"), { release = true })
