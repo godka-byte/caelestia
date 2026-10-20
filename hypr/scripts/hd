@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Set resolution to Full HD (1920x1080 @ 119.88Hz) both dynamically and persistently
+MONITORS_CONF="$HOME/.local/share/caelestia/hypr/hyprland/monitors.conf"
+
+echo "monitor=DP-1, 1920x1080@119.88,0x0,1" > "$MONITORS_CONF"
+hyprctl keyword monitor "DP-1, 1920x1080@119.88,0x0,1"

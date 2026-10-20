@@ -1,0 +1,6 @@
+font=PragmataPro Font:size=12
+
+font=PragmataPro:size=16
+font=JetBrains Mono:size=12
+
+'PragmataPro', 'JetBrains Mono',

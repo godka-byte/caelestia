@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Set resolution to 2K (2560x1440 @ 180Hz) both dynamically and persistently
+MONITORS_CONF="$HOME/.local/share/caelestia/hypr/hyprland/monitors.conf"
+
+echo "monitor=DP-1, 2560x1440@180,0x0,1" > "$MONITORS_CONF"
+hyprctl keyword monitor "DP-1, 2560x1440@180,0x0,1"

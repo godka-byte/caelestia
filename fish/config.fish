@@ -39,7 +39,23 @@ if status is-interactive
     function mark_prompt_start --on-event fish_prompt
         echo -en "\e]133;A\e\\"
     end
-    
+
     # Custom fish config
+    source ~/.local/share/caelestia/fish/conf.d/alias.fish 2> /dev/null
+    source ~/.local/share/caelestia/fish/conf.d/path.fish 2> /dev/null
     source ~/.config/caelestia/user-config.fish 2> /dev/null
 end
+
+# Created by `pipx` on 2026-05-09 08:04:40
+set PATH $PATH /home/godka/.local/bin
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/home/godka/.local/bin" $PATH
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /home/godka/.lmstudio/bin
+# End of LM Studio CLI section
+
+
+[ -s "/home/godka/.jabba/jabba.fish" ]; and source "/home/godka/.jabba/jabba.fish"
