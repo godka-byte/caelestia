@@ -58,6 +58,10 @@ hl.monitor({
     scale    = 1,
 })
 
+-- Monitors
+hl.monitor({ output = "DP-1",    mode = "2560x1440@180", position = "0x0",    scale = 1 })
+hl.monitor({ output = "HDMI-A-1", mode = "3840x2160@60", position = "2560x0", scale = 2, transform = 3 })
+
 -- Configs
 require("hyprland.env")
 require("hyprland.general")
@@ -74,3 +78,7 @@ require("hyprland.keybinds")
 -- User configs
 maybe_create(home .. "/.config/caelestia/hypr-user.lua")
 require("hypr-user")
+
+-- Extra conf files (plugin config and personal autostart)
+hl.source(hypr .. "/dynamic-cursors.conf")
+hl.source(hypr .. "/my.conf")

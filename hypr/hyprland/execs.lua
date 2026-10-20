@@ -2,9 +2,21 @@ local vars = require("variables")
 local fn   = require("utils.functions")
 
 hl.on("hyprland.start", function()
+    -- D-Bus and systemd activation environment
+    hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+    hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+    hl.exec_cmd("systemctl --user start hyprland-session.target")
+
     -- Keyring and auth
     hl.exec_cmd("gnome-keyring-daemon --start --components=secrets")
     hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
+    hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1")
+
+    -- Idle management
+    hl.exec_cmd("hypridle -c ~/.config/hypr/hypridle.conf")
+
+    -- Logitech device manager
+    hl.exec_cmd("solaar --window=hide")
 
     -- Clipboard history
     hl.exec_cmd("wl-paste --type text --watch cliphist store")

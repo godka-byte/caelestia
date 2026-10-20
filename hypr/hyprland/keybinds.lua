@@ -214,6 +214,13 @@ create_bind(
     locked
 )
 
+-- Idle toggle
+create_bind(vars.kbToggleIdle, hl.dsp.exec_cmd("~/.config/hypr/scripts/toggle_idle.sh"))
+
+-- Barcode scanner
+create_bind(vars.kbScanEmulate, hl.dsp.exec_cmd("~/.config/hypr/scripts/scan_emulate.sh"))
+create_bind(vars.kbScanCycle, hl.dsp.exec_cmd("~/.config/hypr/scripts/scan_cycle.sh"))
+
 -- Testing
 create_bind(
     "SUPER + ALT + F12",

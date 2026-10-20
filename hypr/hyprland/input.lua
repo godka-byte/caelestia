@@ -23,3 +23,10 @@ hl.config({
         hotspot_padding = 1,
     },
 })
+
+hl.config({
+    device = {
+        name   = "hotlotus-wcidtest",
+        output = "HDMI-A-1",
+    },
+})

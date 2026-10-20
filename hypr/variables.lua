@@ -29,10 +29,10 @@ return {
     blurXray                   = false,
 
     -- Shadow
-    shadowEnabled              = true,
+    shadowEnabled              = false,
     shadowRange                = 15,
     shadowRenderPower          = 4,
-    shadowColour               = "rgba(" .. scheme.inversePrimary .. "10)",
+    shadowColour               = "rgba(" .. scheme.shadow .. "33)",
 
     -- Gaps
     workspaceGaps              = 20,
@@ -44,15 +44,15 @@ return {
     windowOpacity              = 0.95,
     windowRounding             = 15,
     windowRoundingPower        = 2,
-    windowBorderSize           = 1,
-    activeWindowBorderColour   = "rgba(" .. scheme.primary .. "e6)",
-    inactiveWindowBorderColour = "rgba(" .. scheme.onSurfaceVariant .. "11)",
+    windowBorderSize           = 2,
+    activeWindowBorderColour   = "rgba(" .. scheme.secondary .. "ff)",
+    inactiveWindowBorderColour = "rgba(" .. scheme.outline .. "22)",
 
     -- Misc
     volumeStep                 = 10,
     volumeMax                  = 100,
-    cursorTheme                = "sweet-cursors",
-    cursorSize                 = 24,
+    cursorTheme                = "Bibata-Modern-Classic",
+    cursorSize                 = 36,
     sleepGestureCmd            = "systemctl suspend-then-hibernate",
 
     ------------------
@@ -62,7 +62,7 @@ return {
     -- Modifier only, the actual binds will be mod + 0-9. These should be strings and not arrays.
     kbGoToWs                   = "SUPER",
     kbGoToWsGroup              = "CTRL + SUPER",
-    kbMoveWinToWs              = "SUPER + ALT",
+    kbMoveWinToWs              = "SUPER + SHIFT",
     kbMoveWinToWsGroup         = "CTRL + SUPER + ALT",
 
     -- All the following binds can be either an array of binds to bind multiple keys, or a single string.
@@ -102,6 +102,7 @@ return {
     kbWindowBorderedFullscreen = "SUPER + ALT + F",
     kbToggleWindowFloating     = "SUPER + ALT + Space",
     kbCloseWindow              = "SUPER + Q",
+    kbMoveWsToMon              = "SUPER + ALT + SHIFT",
 
     -- Special workspaces toggles
     kbSpecialWs                = "SUPER + S",
@@ -111,7 +112,7 @@ return {
     kbTodoWs                   = "SUPER + R",
 
     -- Apps
-    kbTerminal                 = "SUPER + T",
+    kbTerminal                 = "SUPER + Return",
     kbBrowser                  = "SUPER + W",
     kbEditor                   = "SUPER + C",
     kbFileExplorer             = "SUPER + E",
@@ -142,10 +143,15 @@ return {
     kbLock                     = "SUPER + L",
     kbRestoreLock              = "SUPER + ALT + L",
     kbSleep                    = "SUPER + SHIFT + L",
+    kbToggleIdle               = "SUPER + SHIFT + I",
 
     -- Clipboard and emoji picker
     kbClipboard                = "SUPER + V",
     kbClipboardDel             = "SUPER + ALT + V",
     kbClipboardPasteLatest     = "CTRL + SHIFT + ALT + V",
     kbEmoji                    = "SUPER + Period",
+
+    -- Dev / barcode scanning
+    kbScanEmulate              = "CTRL + SHIFT + B",
+    kbScanCycle                = "CTRL + SHIFT + N",
 }
